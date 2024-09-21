@@ -114,6 +114,15 @@
             iframe {
                 height: 300px; /* Smaller height for mobile */
             }
+            .cv a.view-pdf {
+                display: inline-block;
+                margin-top: 10px;
+                padding: 10px 15px;
+                background-color: #28a745; /* Different color for view link */
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+            }
         }
     </style>
 </head>
@@ -136,6 +145,7 @@
     <div class="cv-section">
         <div class="cv">
             <h3>Radka's CV</h3>
+            <!-- Added an iframe for preview and a link for mobile devices -->
             <iframe src="CV/CV-Radka Kotuľáková EN.pdf"></iframe>
             <a href="CV/CV-Radka Kotuľáková EN.pdf" download>Download CV</a>
             <a class="view-pdf" href="CV/CV-Radka Kotuľáková EN.pdf" target="_blank">View PDF</a>
@@ -144,6 +154,7 @@
         </div>
         <div class="cv">
             <h3>Rebeka's CV</h3>
+            <!-- Added an iframe for preview and a link for mobile devices -->
             <iframe src="CV/CV-Rebeka Kotuľáková EN.pdf"></iframe>
             <a href="CV/CV-Rebeka Kotuľáková EN.pdf" download>Download CV</a>
             <a class="view-pdf" href="CV/CV-Rebeka Kotuľáková EN.pdf" target="_blank">View PDF</a>
