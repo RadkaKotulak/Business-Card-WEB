@@ -36,7 +36,7 @@
         }
         .cv-section {
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: wrap;  /* Ensure it wraps on small screens */
             justify-content: space-around;
             margin-top: 30px;
         }
@@ -78,26 +78,26 @@
         }
 
         /* Mobile Styles */
-        @media (max-width: 900px) {
+        @media (max-width: 900px) { /* This is a larger mobile/tablet width */
             .cv {
-                width: 80%;
+                width: 80%; /* Take more space on smaller screens */
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 768px) { /* Standard tablet and smaller screens */
             .cv-section {
-                flex-direction: column;
-                align-items: center;
+                flex-direction: column; /* Stack CVs vertically */
+                align-items: center; /* Center each CV */
             }
             .cv {
-                width: 90%;
+                width: 90%; /* Full width on mobile/tablets */
             }
             iframe {
-                height: 400px;
+                height: 400px; /* Adjust iframe height for mobile */
             }
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 480px) { /* Small mobile screens */
             body {
                 padding: 10px;
             }
@@ -112,16 +112,7 @@
                 font-size: 24px;
             }
             iframe {
-                display: none; /* Hide iframe on small mobile screens */
-            }
-            .cv a.view-pdf {
-                display: inline-block;
-                margin-top: 10px;
-                padding: 10px 15px;
-                background-color: #28a745; /* Different color for view link */
-                color: white;
-                text-decoration: none;
-                border-radius: 5px;
+                height: 350px;
             }
         }
     </style>
@@ -147,7 +138,6 @@
             <h3>Radka's CV</h3>
             <iframe src="CV/CV-Radka Kotuľáková EN.pdf"></iframe>
             <a href="CV/CV-Radka Kotuľáková EN.pdf" download>Download CV</a>
-            <a class="view-pdf" href="CV/CV-Radka Kotuľáková EN.pdf" target="_blank">View PDF</a>
             <br>
             <a href="https://www.linkedin.com/in/radka-kotuľáková-791a62238" target="_blank">View Radka's LinkedIn</a>
         </div>
@@ -155,7 +145,6 @@
             <h3>Rebeka's CV</h3>
             <iframe src="CV/CV- Rebeka Kotuľáková EN.pdf"></iframe>
             <a href="CV/CV- Rebeka Kotuľáková EN.pdf" download>Download CV</a>
-            <a class="view-pdf" href="CV/CV- Rebeka Kotuľáková EN.pdf" target="_blank">View PDF</a>
             <br>
             <a href="https://www.linkedin.com/in/rebeka-kotuľáková-b9ab5b238" target="_blank">View Rebeka's LinkedIn</a>
         </div>
