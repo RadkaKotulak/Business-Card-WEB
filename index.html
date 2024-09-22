@@ -3,147 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Design.css" />
     <title>Our Professional Profiles</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-            color: #333;
-        }
-        header {
-            text-align: center;
-            padding: 20px;
-            background-color: #4CAF50;
-            color: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            margin: 0;
-            color: #333;
-        }
-        .intro {
-            margin: 20px 0;
-            text-align: center;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        .highlight {
-            text-decoration: underline;
-            color: #000000;
-        }
-        .cv-section {
-            display: flex;
-            flex-wrap: wrap;  /* Ensure it wraps on small screens */
-            justify-content: space-around;
-            margin-top: 30px;
-        }
-        .cv {
-            background: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 45%;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-            margin-bottom: 20px;
-        }
-        .cv:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        iframe {
-            width: 100%;
-            height: 500px;
-            border: none;
-            border-radius: 5px;
-        }
-        a {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
-            background-color: #007BFF;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        a:hover {
-            background-color: #0056b3;
-        }
-        .center {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        /* Mobile Styles */
-        @media (max-width: 900px) { /* This is a larger mobile/tablet width */
-            .cv {
-                width: 80%; /* Take more space on smaller screens */
-            }
-        }
-
-        @media (max-width: 768px) { /* Standard tablet and smaller screens */
-            .cv-section {
-                flex-direction: column; /* Stack CVs vertically */
-                align-items: center; /* Center each CV */
-            }
-            .cv {
-                width: 90%; /* Full width on mobile/tablets */
-            }
-            iframe {
-                height: 400px; /* Adjust iframe height for mobile */
-            }
-        }
-
-        @media (max-width: 480px) { /* Small mobile screens */
-            body {
-                padding: 10px;
-            }
-            header {
-                padding: 15px;
-                font-size: 18px;
-            }
-            .intro {
-                font-size: 16px;
-            }
-            h2 {
-                font-size: 24px;
-            }
-            iframe {
-                height: 350px;
-            }
-        }
-    </style>
 </head>
 <body>
     <header>
         <h1>Welcome to Our Professional Profiles</h1>
     </header>
+    
     <div class="intro">
         <p>
-            Hello! <br>
-            We are <strong>Rebeka</strong> and <strong>Radka Kotuľáková</strong>, twin sisters currently studying <strong>Business Information Systems</strong> at Atlantic Technological University. We are seeking <strong>part-time</strong> roles or <strong>internships</strong> in areas such as business analysis, data management, or similar positions where we can apply our technical skills in Excel, SQL, and Python.
-            <br><br>
-            We are also looking for student jobs (<span class="highlight">weekend work</span>) in <strong>IT</strong>, <strong>Business</strong>, <strong>Hospitality</strong>, or <strong>Retail</strong>, as well as a placement in <strong>IT</strong> starting in <span class="highlight">January/February 2025</span>. 
-            <br><br>
+            Q&A <br>
+            <strong>WHO ARE WE?</strong> Passionate BUSINESS INFORMATION SYSTEMS students<br>
+            <strong>WHERE?</strong> at Atlantic Technological University in Galway IRELAND<br>
+            <br>
+            <br>
+            WE ARE LOOKING FOR<br>
+            <strong>INTERNSHIP / PLACEMENT</strong> <br>
+            <strong>GRADUATE JOB</strong> <br> <br>
+            WHAT AREAS?
+            (<span class="highlight">Data Analisys, Business Analysis, Data Managment, Project Managment</span>) <br>
+            Ready to start in January 2025 and onwards! <br>
+
+            <strong>PART-TIME JOB</strong> <br> <br>
+            WHAT AREAS?
+            (<span class="highlight">in IT, Retail, Hospitaliy or others</span>)  
+            <br>
+            in Galway for Friday, Saturday and Sunday<br>
             Feel free to explore our CVs and a detailed document outlining what we’re seeking by following the links below. We’re excited to bring our creativity, technical expertise, and enthusiasm to your team!
         </p>
     </div>
 
     <h2 class="center">Meet us!</h2>
+
+    <div class="main">
+        <div class="image-container">
+            <img src="cv/Radka.png" alt="Radka" width="300" height="380" class="bordered-image">
+            <div class="overlay">Radka</div>
+        </div>
+        <div class="image-container">
+            <img src="cv/Rebeka.png" alt="Rebeka" width="300" height="380" class="bordered-image">
+            <div class="overlay">Rebeka</div>
+        </div>
+    </div>
+    
     <div class="cv-section">
+        <!-- Radka's CV Section -->
         <div class="cv">
             <h3>Radka's CV</h3>
             <iframe src="CV/CV-Radka Kotuľáková EN.pdf"></iframe>
+            <br>
             <a href="CV/CV-Radka Kotuľáková EN.pdf" download>Download CV</a>
             <br>
             <a href="https://www.linkedin.com/in/radka-kotuľáková-791a62238" target="_blank">View Radka's LinkedIn</a>
         </div>
+
+        <!-- Rebeka's CV Section -->
         <div class="cv">
             <h3>Rebeka's CV</h3>
             <iframe src="CV/CV- Rebeka Kotuľáková EN.pdf"></iframe>
+            <br>
             <a href="CV/CV- Rebeka Kotuľáková EN.pdf" download>Download CV</a>
             <br>
             <a href="https://www.linkedin.com/in/rebeka-kotuľáková-b9ab5b238" target="_blank">View Rebeka's LinkedIn</a>
