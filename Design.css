@@ -34,38 +34,33 @@ h1, h2 {
     color: #ffffff;
 }
 
-.cv-section {
-    display: flex; /* Use flexbox to align the CV sections horizontally */
-    justify-content: space-between; /* Space between the CVs */
-    gap: 20px; /* Optional: Adds some space between the two CV sections */
-    margin-top: 30px;
-}
 
 .main {
     display: flex; /* Use flexbox to align items horizontally */
     justify-content: center; /* Center the images */
-    gap: 160px; /* Optional: Space between images */
+    gap: 10px; /* Optional: Space between images */
     margin-top: 20px; /* Optional: Add some space above */
+    flex-wrap: wrap;
+
 }
 
-.cv {
-    background: rgb(95, 95, 95);
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 45%; /* Ensure each CV takes up equal width */
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+.section {
+    display: flex; /* Enable flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    gap: 20px; /* Space between items */
+    margin: -5px auto; /* Center the section */
+    padding: 20px; /* Padding inside the section */
+    
 }
 
-.cv:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.resume {
+    flex: 1 1 calc(50% - 20px); /* Two-column layout */
+    padding: 5px; /* Padding around resume content */
+    text-align: center; /* Center-align text within resume */
 }
-
 iframe {
     width: 100%; /* Ensure iframe takes full width of its parent */
-    height: 810px; /* Set a fixed height for consistency */
+    height: 500px; /* Set a fixed height for consistency */
     border: none;
     border-radius: 5px;
 }
@@ -96,6 +91,8 @@ a:hover {
     box-shadow: 0 0 0 5px #000000; /* Creates a 'border' effect */
     border-radius: 20px 40px;
     background-color: #181818;
+    max-width: 45%; /* Ensure images are side by side */
+    margin: 0 auto;
     
 }
 
@@ -104,13 +101,16 @@ a:hover {
     display: inline; /* Prevents extra space below the image */
     border-radius: inherit; /* Matches the border radius of the container */
     transition: transform 0.9s ease; /* Smooth transition for rotation */
-    filter: drop-shadow(2px 6px 8px rgb(28, 117, 252))
+    filter: drop-shadow(2px 6px 8px rgb(28, 117, 252));
+    width: 100%; /* Ensure image scales */
+    height: auto; /* Ensure the image height scales proportionally */
+    max-height: 300px; /* Set a maximum height for the images */
 }
 
 /* Overlay text */
 .overlay {
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgb(7, 3, 59); /* Text color */
@@ -163,4 +163,88 @@ a:hover {
 .image-container {
     animation: border-wave 2s infinite linear; /* Border wave animation */
 }
+/* Media Query for Small Devices */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
 
+    .main {
+        justify-content: center;
+        flex-wrap: wrap; /* Ensure items wrap on small screens */
+        gap: 10px;
+    }
+
+    .image-container {
+        margin: 0 auto;
+    }
+
+    .bordered-image {
+        width: 100%;
+    }
+
+    .section {
+        justify-content: flex-start; /* Left align resumes on small screens */
+    }
+
+    .resume {
+        flex: 1 1 calc(50% - 20px); /* Maintain two-column layout */
+        max-width: calc(50% - 20px); /* Max width for responsiveness */
+    }
+
+    iframe {
+        height: 400px; 
+    }
+
+    .overlay {
+        font-size: 30px;
+    }
+
+    /* Adjust font size */
+    .intro {
+        font-size: 16px;
+    }
+
+    .highlight {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .main {
+        gap: 10px; /* Adjust the gap between images for smaller screens */
+    }
+
+    .image-container {
+        max-width: 45%; /* Maintain image size for small screens */
+    }
+
+    .bordered-image {
+        width: 100%;
+    }
+
+    .overlay {
+        font-size: 20px;
+    }
+
+    iframe {
+        height: 350px;
+    }
+
+    .resume {
+        flex: 1 1 calc(50% - 20px); /* Maintain two-column layout */
+        max-width: calc(50% - 20px);/* Stack items in a single column */
+    }
+}
