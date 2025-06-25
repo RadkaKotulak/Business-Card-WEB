@@ -4,26 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Design.css" />
+    
+
+
     <title>Our Professional Profiles</title>
 </head>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const acc = document.querySelectorAll(".accordion-btn");
+      acc.forEach(btn => {
+        btn.addEventListener("click", function () {
+          this.classList.toggle("active");
+          const panel = this.nextElementSibling;
+          panel.style.display = panel.style.display === "block" ? "none" : "block";
+        });
+      });
+    });
+  </script>
+
 <body>
     <header>
-        <h1>Welcome to Our Professional Profiles</h1>
+        <h1>Hi There ! Are you Hiring?</h1>
     </header>
     
-    <div class="intro">
-        <p>
-            <strong>WHO ARE WE?</strong> <br>Passionate BUSINESS INFORMATION SYSTEMS students<br>
-            <strong>WHERE?</strong><br> at Atlantic Technological University in Galway IRELAND<br>
-            <br>
-            WHAT ARE LOOKING FOR ?<br>
-            <strong>PLACEMENT</strong> <br>
-            <strong>GRADUATE JOB</strong> <br> <br>
-            WHAT AREAS? <br>
-            <span class="highlight">Data Analysis, Business Analysis, Web Development, Project Managment, </span> <br> <br>
-            Ready to start in January 2025 and onwards! <br>
+        <div class="skills-section">
+  <h2 class="center">🛠️ Our Superpowers</h2>
+  <div class="skills-grid">
+    <div class="skill-card">📊 Data Analysis</div>
+    <div class="skill-card">📈 Business Intelligence</div>
+    <div class="skill-card">🧮 Excel & Power BI</div>
+    <div class="skill-card">🗃️ SQL & Databases</div>
+    <div class="skill-card">📂 Data Cleaning</div>
+    <div class="skill-card">🧠 Critical Thinking</div>
+    <div class="skill-card">🧾 Reporting & Dashboards</div>
+    <div class="skill-card">🤝 Customer Service</div>
+    <div class="skill-card">🍽️ Hospitality Experience</div>
+    <div class="skill-card">🗣️ Communication</div>
+    <div class="skill-card">🧩 Problem Solving</div>
+    <div class="skill-card">📅 Time Management</div>
+  </div>
+</div>
 
-        
+    <div class="intro-section">
+  <h2 class="center">👋 Welcome!</h2>
+  <p class="center">We’re <strong>Business Information Systems graduates</strong> from <strong>ATU Galway</strong></p>   <p class="center"> tech-savvy, data-hungry, and caffeine-fueled ☕</p>
+
+  <div class="accordion">
+    <button class="accordion-btn">🎓 Who Are We?</button>
+    <div class="accordion-panel">
+      <p>We’re Level 7 BIS graduates from Atlantic Technological University, Galway 🍀</p>
+    </div>
+
+    <button class="accordion-btn">📍 Where Are We?</button>
+    <div class="accordion-panel">
+      <p>Based in Galway, Ireland </p>
+    </div>
+
+    <button class="accordion-btn">💼 What Are We Looking For?</button>
+    <div class="accordion-panel">
+      <ul>
+        <li>🕒 Part-Time Weekend Jobs</li>
+        <li>🚀 Opportunities to shine and grow</li>
+      </ul>
+    </div>
+
+    <button class="accordion-btn">🧠 What Do We Love?</button>
+    <div class="accordion-panel">
+      <ul>
+        <li>📊 Data Analysis</li>
+        <li>📈 Business Analysis</li>
+        <li>💻 Web Development</li>
+        <li>📅 Project Management</li>
+      </ul>
+    </div>
+
+    <button class="accordion-btn">🚀 Ready to Launch?</button>
+    <div class="accordion-panel">
+      <p>We’re available from <strong>September 2025</strong> onward. Let’s build something brilliant together! ✨</p>
+  
+  </div>
+</div>
+
+
 
     </div>
 
@@ -31,15 +94,15 @@
 
     <div class="main">
         <div class="image-container">
-            <img src="CV/Radka.png" alt="Radka" width="300" height="380" class="bordered-image">
+            <img src="CV/radkanoback.png" alt="Radka" width="300" height="380" class="bordered-image">
             <div class="overlay">
-                <a href="radka.html" style="color: white; text-decoration: none;">Radka</a>
+                <a href="radka.html" style="color: rgb(255, 255, 255); text-decoration: none;">Radka</a>
             </div>
         </div>
         <div class="image-container">
-            <img src="CV/Rebeka.png" alt="Rebeka" width="300" height="380" class="bordered-image">
+            <img src="CV/rebekanoback.png" alt="Rebeka" width="300" height="380" class="bordered-image">
             <div class="overlay">
-                <a href="rebeka.html" style="color: white; text-decoration: none;">Rebeka</a>
+                <a href="rebeka.html" style="color: rgb(255, 255, 255); text-decoration: none;">Rebeka</a>
             </div>
         </div>
     </div>
@@ -48,7 +111,7 @@
         <!-- Radka's CV Section -->
         <div class="resume">
             <p>RADKA</p>
-            <a href="CV/CV-Radka Kotuľáková EN.pdf" download>Download CV</a><br>
+            <a href="CV/CV-Radka Kotuľáková EN (1).pdf" download>Download CV</a><br>
             <a href="https://www.linkedin.com/in/radka-kotuľáková-791a62238" target="_blank">View LinkedIn</a>
         </div>
     
@@ -56,10 +119,11 @@
         <!-- Rebeka's CV Section -->
         <div class="resume">
             <p>REBEKA</p>
-            <a href="CV/CV- Rebeka Kotuľáková EN.pdf" download>Download CV</a><br>
+            <a href="CV/CV- Rebeka Kotuľáková EN (1).pdf" download>Download CV</a><br>
             <a href="https://www.linkedin.com/in/rebeka-kotuľáková-b9ab5b238" >View LinkedIn</a>
         </div>
     </div>
 </body>
 </html>
+
 
